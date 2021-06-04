@@ -1,0 +1,47 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/all-blogs-styles.css' %}">
+    <title>Blogs</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="text-block">
+                <h2>📖</h2>
+                <h1>All blogs</h1>
+            </div>
+            <hr> {% if not blogs %}
+            <h2>No blogs has been published yet...</h2>
+            {% elif blogs.length == 1 %}
+            <h2>{{ blogs.count }} blog{{ blogs.count|pluralize }} has been published</h2>
+            {% endif %}
+            <div class="blogs">
+                {% for blog in blogs %}
+                <a href="{% url 'blog:detail' blog.id %}">
+                    <div class="blog">
+                        <h2 class="blog-title">
+                            {{ blog.title }}
+                        </h2>
+                        <p class="blog-date">
+                            {{ blog.date }}
+                        </p>
+                        <p class="blog-description">
+                            {{ blog.description|striptags|truncatechars:100|escape }}
+                        </p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+body {
+    font-family: 'Montserrat';
+    color: white;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 5vh;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+}
+
+p {
+    text-transform: uppercase;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+main,
+section {
+    min-height: 100vh;
+}
+
+main,
+.main-text-block {
+    background-color: rgb(0, 130, 255);
+    color: white;
+}
+
+.main-text-block {
+    margin: 0 auto;
+    padding-top: 30vh;
+}
+
+.main-text-block p {
+    padding-top: 20px;
+}
+
+.main-icons-block {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-icons-block>img {
+    width: 65px;
+    margin: 15px;
+}
+
+#htmlcss {
+    width: 130px;
+}
+
+.bg-text {
+    font-size: 400px;
+    font-weight: 800;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.2;
+    left: 40%;
+    bottom: 20%;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 50px;
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+}
+
+.project-card {
+    min-height: 350px;
+    width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #407DFF;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.project-card:hover {
+    text-decoration: none;
+}
+
+.project-card>img {
+    width: 100%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.project-title {
+    text-decoration: none;
+    font-size: 3.5vh;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.project-description {
+    font-size: 2.5vh;
+    min-height: 50px;
+}
+
+.cards {
+    text-align: center;
+    padding-top: 10vh;
+    background-color: #3900FF;
+}
+
+.cards-no-added {
+    font-size: 25px;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 5vh;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.blogs button {
+    text-transform: uppercase;
+}
+
+.blogs-btn {
+    margin-top: 200px;
+    font-size: 25px;
+    z-index: 1;
+}
+
+.blogs {
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 60px;
+    background: rgb(0, 151, 255);
+    background: linear-gradient(140deg, rgba(0, 151, 255, 1) 0%, rgba(0, 233, 255, 1) 100%);
+    text-align: center;
+}
+
+.background-text {
+    position: absolute;
+    opacity: 0.2;
+    font-size: 250px;
+    user-select: none;
+}

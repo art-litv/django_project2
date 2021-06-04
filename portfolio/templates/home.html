@@ -1,0 +1,62 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,800" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <main>
+        <div class="container text-center">
+            <div class="main-text-block">
+                <span class="bg-text">P</span>
+                <h2>👨‍💻</h2>
+                <h1>My portfolio website</h1>
+                <p>A website written on Django Framework on purpose <br> of creating a portfolio</p>
+            </div>
+            <div class="main-icons-block">
+                <img src="{% static 'images/python.svg' %}">
+                <img src="{% static 'images/django.svg' %}">
+                <img src="{% static 'images/htmlcss.svg' %}" id="htmlcss">
+                <img src="{% static 'images/bootstrap.svg' %}">
+            </div>
+        </div>
+    </main>
+    <section class="cards">
+        <div class="container">
+            <h2>📂</h2>
+            <h2>Personal projects</h2>
+            <hr> {% if not projects %}
+            <span class="cards-no-added">No projects has been added...</span> {% endif %}
+            <ul>
+                {% for project in projects %}
+                <li>
+                    <a href="{{ project.url }}" target="_blank">
+                        <div class="project-card">
+                            <span class="project-title">{{ project.title }}</span>
+                            <span class="project-description">{{ project.description }}</span>
+                            <img src=" ../../media/{{ project.image }} ">
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <section class="blogs">
+        <div class="container">
+            <h2 class="background-text">BLOGS</h2>
+            <h2>📖</h2>
+            <h2>My blogs</h2>
+            <a href="{% url 'blog:all_blogs' %}"><button type="button" class="btn btn-light btn-lg blogs-btn">See blogs</button></a>
+        </div>
+    </section>
+</body>
+
+</html>
